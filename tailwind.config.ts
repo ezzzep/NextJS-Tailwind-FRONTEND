@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -7,13 +8,19 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+    screens: {
+      xs: "320px",
+      sm: "640px",
+      md: "768px",
+      lg: "1080px",
+      xl: "1280px",
+    },
+      extend: {
+        fontFamily: {
+          montserrat: [ "Montserrat", "sans-serif"],
+        },
       },
     },
-  },
-  plugins: [],
-};
+  };
+
 export default config;
